@@ -1,8 +1,9 @@
-
+from random import randint
 
 # Creates the board
 def create_board():
     return [['~' for x in range(8)] for x in range(8)]
+    
 
 # Show the board to the player
 def print_board(board):
@@ -14,8 +15,12 @@ def print_board(board):
 
 
 # Randomly place 5 ships on the board
-def place_ships():
-    pass
+def place_ships(board):
+    for ship in range(5):
+        ship_row, ship_column = randint(0,7), randint(0,7)
+        while board[ship_row][ship_column] == "X":
+            ship_row, ship_column = randint(0,7), randint(0,7)
+        board[ship_row][ship_column] = "X"
 
 # Ask the player where to shoot
 def get_player_move(rows, columns):
