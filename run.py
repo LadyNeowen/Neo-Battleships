@@ -18,3 +18,12 @@ def print_board(board):
     print(" ", " ".join("12345"))
     for letter, row in zip("ABCDE", board):
         print(letter, " ".join(row))
+
+def place_ships(board, num_ships=4):
+    placed = 0
+    while placed < num_ships:
+        row = random.randint(0, 4)
+        col = random.randint(0, 4)
+        if board[row][col] == "~":
+            board[row][col] = "@"
+            placed += 1
