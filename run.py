@@ -60,3 +60,14 @@ def check_hit(hidden_board, player_board, row, col):
         print("Aargh! It's a miss! 💦")
         player_board[row][col] = "O"
         return False
+
+def play_game():
+    # Intro and setup
+    print_intro()
+    player_name = input("Please enter your name: ")
+    print(f"\n Welcome to NeoBattleships, {player_name}!")
+    print(" You have 10 turns to sink all 4 ships.\nGod speed sailor!\n")
+
+    player_board = [["~"] * 5 for _ in range(5)]
+    hidden_board = [["~"] * 5 for _ in range(5)]
+    place_ships(hidden_board)
