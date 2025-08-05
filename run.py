@@ -27,3 +27,26 @@ def place_ships(board, num_ships=4):
         if board[row][col] == "~":
             board[row][col] = "@"
             placed += 1
+
+def shoot():
+    while True:
+        guess = input("Aim the cannons!!! (e.g. A5) \nSink these blasted land lubbers \nright into the abyss! \n ").upper()
+        if len(guess) < 2:
+            print("\nYou can't shoot there cap..\nTry something like A1.")
+            continue
+       
+        row_letter = guess[0]
+        col_number = guess[1:]
+        row_index = "ABCDE".find(row_letter)
+       
+        if row_index == -1 or not col_number.isdigit():
+            print("\nYou can't shoot there cap..\nTry something like A1")
+            continue
+       
+        col_number = int(col_number)
+        if not (1 <= col_number <= 5):
+            print("\nYou can't shoot there cap..\nTry something like A1")
+            continue
+       
+        col_index = col_number - 1
+        return row_index, col_index
