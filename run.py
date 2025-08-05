@@ -106,3 +106,19 @@ def play_game():
         print("\nCongratulations! You sank all the ships! 💥🏴‍☠️")
     else:
         print("\nGame Over!!💀💀💀 \nYou ran out of cannonballs...💣")
+
+         # Ask to play again
+    while True:
+        again = input("\nWould you like to play again, captain? \n(Y/N): ").strip().upper()
+        if again == "Y":
+            print("\nAye aye! Reload the cannons!\n")
+            play_game()
+            break
+        elif again == "N":
+            print("\nFair winds and following seas, captain! ⚓️")
+            break
+        else:
+            print("Just Y or N, cap'n!")
+
+# Start the first game
+play_game()
