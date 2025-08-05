@@ -99,3 +99,10 @@ def play_game():
             print(f"Total hits: {hits}/{max_hits}")
 
         turn += 1
+
+        # End of game
+    print_board(player_board)
+    if hits == max_hits:
+        print("\nCongratulations! You sank all the ships! 💥🏴‍☠️")
+    else:
+        print("\nGame Over!!💀💀💀 \nYou ran out of cannonballs...💣")
