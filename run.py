@@ -50,3 +50,13 @@ def shoot():
        
         col_index = col_number - 1
         return row_index, col_index
+
+def check_hit(hidden_board, player_board, row, col):
+    if hidden_board[row][col] == "@":
+        print("It's a HIT!!! 💣💥 Well done captain! ")
+        player_board[row][col] = "X"
+        return True
+    else:
+        print("Aargh! It's a miss! 💦")
+        player_board[row][col] = "O"
+        return False
