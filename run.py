@@ -71,3 +71,31 @@ def play_game():
     player_board = [["~"] * 5 for _ in range(5)]
     hidden_board = [["~"] * 5 for _ in range(5)]
     place_ships(hidden_board)
+
+    # Game loop
+    hits = 0
+    max_hits = 4
+    turn = 1
+    max_turns = 10
+
+    while hits < max_hits and turn <= max_turns:
+        print_board(player_board)
+        print()
+        print(f"Turn {turn} of {max_turns}")
+        print()
+
+        while True:
+            row, col = shoot()
+            if player_board[row][col] in ["X", "O"]:
+                print("\nYou already shot there captain!!\nTry again somewhere else.\n")
+            else:
+                break
+
+        was_hit = check_hit(hidden_board, player_board, row, col)
+        if was_hit:
+            hits += 1
+            print(f"Total hits: {hits}/{max_hits}")
+        else:
+            print(f"Total hits: {hits}/{max_hits}")
+
+        turn += 1
