@@ -58,3 +58,13 @@ There have honestly been so many misstakes that listing them all here would be t
 
 ## Deployment
 
+*
+*
+
+## Credits
+
+* Code institute for the deployment terminal
+*
+*
+*
+*
