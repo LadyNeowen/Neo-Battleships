@@ -1,32 +1,60 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Neo-Battleships
+The neo-battleships is a fun game of battleships with a bit of a pirate flare. 
+It is a terminal game which runs on the Code institute mock terminal on Heroku. 
 
-Welcome,
+## How to play
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
+The game is based on the classic board game of "Sink the ship" or "Battleships".
+In my version the player is thrown into some roleplay where they are asked to enter their name,
+followed by a fun game against the computer where the player has to try to sink all the hidden ships (4)
+and do so with 10 bombs. 
+The board is 5*5 and the ships are randomly generated each time. 
+Empty slots are marked with a ~
+Hits are marked with an X 
+And misses are marked with an O.
 
-## Reminders
+The player wins if they manage to find and sink all four battleships and looses if they run out of turns.
+At the end of each game, the player is asked if they want to play again, if they choose yes the game starts over.
+And if they choose no, the game is ended and the player is bid farewell.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## Features 
 
-## Creating the Heroku app
+* Generate a random board
+* Play against the computer in a roleplay against the computer
+* Accepts users input
+* Maintain a count and hit score
+* Input validation and error checking
+** Which means the user cannot place a ship same place twice
+** They have to enter a letter/number input for where they would like to make a guess
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Future features
 
-1. `heroku/python`
-2. `heroku/nodejs`
+* Computer board is also displayed and the computer makes random guesses
+* Highscore count for the player names
+* Choose board size and placing ships yourself
+* Have larger ships
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Testing
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+* I have passed the code through PEP8 linter and confirmed there are no problems
+* Made sure there is an error message that prints if the user makes invalid inputs
+* Tested in my local terminal as well as the Code Institute Heroku terminal
 
-Connect your GitHub repository and deploy as normal.
+## Solved bugs
 
-## Constraints
+* I have built almost my entire game in the PythonCode Pad which has built in bug testing 
+so it has quickly shown me when I have made something wrong. It also has a "play" function,
+so I have continuously been able to play my code through to see if it worked and if it didn't the
+app would point out to me what line of code was causing the trouble.
+There have honestly been so many misstakes that listing them all here would be tediouos if not impossible.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## Remaining bugs
 
----
+* No bugs remaining
 
-Happy coding!
+## Validator tesing 
+
+* PEP8 where no errors were found
+
+## Deployment
+
