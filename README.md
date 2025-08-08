@@ -54,7 +54,7 @@ There have honestly been so many misstakes that listing them all here would be t
 
 ## Validator tesing 
 
-* PEP8 where no errors were found
+* ~PEP8 where no errors were found~
 
 ## Deployment
 
@@ -64,7 +64,7 @@ There have honestly been so many misstakes that listing them all here would be t
 ## Credits
 
 * Code institute for the deployment terminal
-*
-*
-*
+* My mentor Luke Buchanan for much help and support in this proccess
+* Knowledge Mavens https://www.youtube.com/watch?v=tF1WRCrd_HQ&ab_channel=KnowledgeMavens for fundamental build stategy
+* 
 *

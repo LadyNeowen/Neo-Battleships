@@ -1,16 +1,28 @@
-import random
+"""
+Python Battleship Game
+Legend
 
+'X' for hit battleship
+'~' for available space
+'O' for missed shot
+'@' for placed battleship
+"""
+
+import random
 
 """
 Function to play the game intro
+
 """
 def print_intro():
     print(" ..You wake up with a throbbing ache \n at the back of your skull.\n As you rise up slowly your eyes widen..\n You are standing on the deck of a \n giant ship! \n All of a sudden a cannonblast goes off \n right next to you and a man shouts: \n Hey you!! What's your name? \n Nevermind that! YOU are in charge now! \n Where should we aim the cannons \n captain?!")
     print()
     print()
 
+
 """
 Function to print the board with numbers as columns and letters as rows 1-5 A-E
+
 """
 def print_board(board):
     print(" ", " ".join("12345"))
@@ -19,6 +31,7 @@ def print_board(board):
 
 """
 Function to place 4 random ships on the board
+
 """
 def place_ships(board, num_ships=4):
     placed = 0
@@ -31,7 +44,8 @@ def place_ships(board, num_ships=4):
 
 """
 Asking the player for an input but instead of asking for column and row separately instead making it a single input,
-as well as making sure the loop repeats util it gets a an approved input.
+as well as making sure the loop repeats util it gets a an approved input
+
 """
 def shoot():
     while True:
@@ -58,7 +72,8 @@ def shoot():
 
 
 """
-Checking if the guessed input was a hit or a miss and printing the appropriet messages.
+Checking if the guessed input was a hit or a miss and printing the appropriet messages
+
 """
 def check_hit(hidden_board, player_board, row, col):
     if hidden_board[row][col] == "@":
@@ -84,11 +99,11 @@ def play_game():
     hidden_board = [["~"] * 5 for _ in range(5)]
     place_ships(hidden_board)
 
-
     """
     Making the game loop with maximum hits for the same amount of ships there are, a maximum of turns and a turn count,
-    also while checking for a correct input before breaking out of the loop and increasing the count    
+    also while checking for a correct input before breaking out of the loop and increasing the count   
     """
+
     hits = 0
     max_hits = 4
     turn = 1
@@ -118,13 +133,13 @@ def play_game():
 
     """
     Checking for the end game to see if all the ships were hit or if the amount of turns were up and printing the message accordingly
+
     """
     print_board(player_board)
     if hits == max_hits:
         print("\nCongratulations! You sank all the ships! 💥🏴‍☠️")
     else:
         print("\nGame Over!!💀💀💀 \nYou ran out of cannonballs...💣")
-
 
     """
     Checking after the game is over if the player wants to play again, if so restarting the intro and name input,
@@ -141,6 +156,5 @@ def play_game():
             break
         else:
             print("Just Y or N, cap'n!")
-
 
 play_game()
