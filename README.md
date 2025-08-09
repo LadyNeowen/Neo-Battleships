@@ -46,15 +46,16 @@ And if they choose no, the game is ended and the player is bid farewell.
 so it has quickly shown me when I have made something wrong. It also has a "play" function,
 so I have continuously been able to play my code through to see if it worked and if it didn't the
 app would point out to me what line of code was causing the trouble.
-There have honestly been so many misstakes that listing them all here would be tediouos if not impossible.
+Spotted and fixed problem with while loop with the help of ChatGPT.
+Got error messages about whitespace and long lines on PEP8 and got help from ChatGPT to reformat it with black to clean it up.
 
 ## Remaining bugs
 
-* No bugs remaining
+* Only bug remaining is that it only seems to work on some mobile phones, while working perfectly on both computer and ipad.
 
 ## Validator tesing 
 
-* ~PEP8 where no errors were found~
+* PEP8, got error messages about whitespace but fixed it with reformatting with AI.
 
 ## Deployment
 
